@@ -26,9 +26,24 @@ export function Footer({ variant = "default" }: FooterProps) {
             <div className="space-y-3">
               <p className="text-label">Gallery</p>
               <div className="text-sm space-y-1">
-                <Link to="/work" className="block text-foreground hover:text-accent transition-colors">Projects</Link>
-                <Link to="/about" className="block text-foreground hover:text-accent transition-colors">About</Link>
-                <Link to="/contact" className="block text-foreground hover:text-accent transition-colors">Contact</Link>
+                <Link
+                  to="/work"
+                  className="block text-foreground hover:text-accent transition-colors"
+                >
+                  Projects
+                </Link>
+                <Link
+                  to="/about"
+                  className="block text-foreground hover:text-accent transition-colors"
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block text-foreground hover:text-accent transition-colors"
+                >
+                  Contact
+                </Link>
               </div>
             </div>
 
@@ -36,7 +51,10 @@ export function Footer({ variant = "default" }: FooterProps) {
             <div className="space-y-3">
               <p className="text-label">Contact</p>
               <div className="text-sm text-foreground space-y-1">
-                <a href="mailto:hello@jordanstudio.com" className="block hover:text-accent transition-colors">
+                <a
+                  href="mailto:hello@jordanstudio.com"
+                  className="block hover:text-accent transition-colors"
+                >
                   hello@jordanstudio.com
                 </a>
                 <p>+55 11 9999-9999</p>
@@ -77,7 +95,9 @@ export function Footer({ variant = "default" }: FooterProps) {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Left */}
           <div className="space-y-4">
-            <p className="font-display text-xl font-semibold">Jordan Studio</p>
+            <p className="font-display text-xl font-semibold">
+              Carlos Osmar Caceres
+            </p>
             <p className="text-muted-foreground text-sm">
               Design & Illustration
             </p>
@@ -85,14 +105,20 @@ export function Footer({ variant = "default" }: FooterProps) {
 
           {/* Center */}
           <div className="flex gap-8 text-sm text-muted-foreground">
-            <Link to="/work" className="hover-highlight">Work</Link>
-            <Link to="/about" className="hover-highlight">About</Link>
-            <Link to="/contact" className="hover-highlight">Contact</Link>
+            <Link to="/work" className="hover-highlight">
+              Work
+            </Link>
+            <Link to="/about" className="hover-highlight">
+              About
+            </Link>
+            <Link to="/contact" className="hover-highlight">
+              Contact
+            </Link>
           </div>
 
           {/* Right */}
           <div className="text-sm text-muted-foreground">
-            <p>© {currentYear} Jordan Studio</p>
+            <p>© {currentYear} Carlos Osmar Caceres</p>
             <p className="mt-1">São Paulo, Brazil</p>
           </div>
         </div>

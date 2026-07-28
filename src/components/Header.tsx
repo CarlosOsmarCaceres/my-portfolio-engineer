@@ -43,21 +43,21 @@ export function Header({ revealMode = false }: HeaderProps) {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 -translate-y-full pointer-events-none'
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-full pointer-events-none"
       }`}
     >
       <div className="container-wide relative">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="font-display text-lg font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity"
           >
-            Jordan Studio
+            C O C
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -84,7 +84,8 @@ export function Header({ revealMode = false }: HeaderProps) {
               className="p-2 text-foreground/60 hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
+              {mounted &&
+                (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
             </button>
           </div>
 
@@ -95,7 +96,8 @@ export function Header({ revealMode = false }: HeaderProps) {
               className="p-2 text-foreground/60 hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
+              {mounted &&
+                (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
             </button>
             <button
               className="p-2 -mr-2 text-foreground"
