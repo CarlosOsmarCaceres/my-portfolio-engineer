@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# Carlos Osmar Caceres - Personal Portfolio
 
-## Project info
+Welcome to the repository of my personal engineering portfolio. This project serves as a digital resume, showcasing my skills, professional experience, and featured projects.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 Live Preview
 
-## How can I edit this code?
+**Check out the live website:** [my-portfolio-engineer-ten.vercel.app](https://my-portfolio-engineer-ten.vercel.app/)
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+This project is built with modern web technologies to ensure a fast, responsive, and scalable application:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **React** - A JavaScript library for building user interfaces.
+- **TypeScript** - Strongly typed programming language that builds on JavaScript.
+- **Vite** - Next-generation frontend tooling for fast development.
+- **Tailwind CSS** - A utility-first CSS framework for rapid UI development.
+- **shadcn/ui** - High-quality, accessible UI components.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Running the Project Locally
 
-**Use your preferred IDE**
+If you want to explore the code or run this project on your local machine, follow these steps:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/CarlosOsmarCaceres/my-portfolio-engineer.git
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Navigate to the project directory:**
+   ```sh
+   cd my-portfolio-engineer
+   ```
 
-Follow these steps:
+3. **Install the dependencies:**
+   ```sh
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📫 Contact & Links
 
-# Step 3: Install the necessary dependencies.
-npm i
+I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **LinkedIn:** [Carlos Osmar Caceres](https://www.linkedin.com/in/carlos-osmar-caceres-tlt/)
+- **Portfolio:** [Live Site](https://my-portfolio-engineer-ten.vercel.app/)
+- **GitHub:** [@CarlosOsmarCaceres](https://github.com/CarlosOsmarCaceres)

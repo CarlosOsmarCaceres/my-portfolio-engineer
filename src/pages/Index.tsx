@@ -54,15 +54,17 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/30" />
 
         {/* Centered Title - Overlaid */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
           <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
-            Carlos Osmar Caceres
+            QA Automation Engineer
           </h1>
         </div>
 
         {/* Bio - Bottom Left */}
         <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
-          <h2>wfgwgwgwgweg</h2>
+          <h2 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground/80">
+            Carlos Osmar Caceres
+          </h2>
           <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
             Hi! I'm Jordan, an independent artist and designer specializing in
             brand identity, illustration, and visual design. I help brands tell
