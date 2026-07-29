@@ -45,10 +45,10 @@ export function Header({ revealMode = false }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all bg-background/10 backdrop-blur-sm duration-500 ${
         isVisible
           ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-full pointer-events-none"
+          : " -translate-y-full pointer-events-none"
       }`}
     >
       <div className="container-wide relative">
@@ -113,14 +113,14 @@ export function Header({ revealMode = false }: HeaderProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-background z-40 animate-fade-in">
-          <nav className="container-wide bg-black/90 py-12 flex flex-col gap-8">
+        <div className="md:hidden fixed inset-0 top-20 z-40 animate-fade-in ">
+          <nav className="container-wide py-12 flex flex-col gap-8  bg-b">
             {navItems.map((item, index) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-4xl font-display text-foreground animate-fade-in-up"
+                className="text-4xl font-display text-foreground animate-fade-in-up bg-background/10 backdrop-blur-sm"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.label}
