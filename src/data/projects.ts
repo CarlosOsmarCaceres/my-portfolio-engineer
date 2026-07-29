@@ -7,6 +7,8 @@ import abstractPaint from "@/assets/img-06.jpeg";
 import abstractLayers from "@/assets/img-07.jpeg";
 import fluidArt from "@/assets/img-08.jpeg";
 import fluidArt9 from "@/assets/img-09.jpeg";
+import fluidArt10 from "@/assets/img-10.jpeg";
+import fluidArt11 from "@/assets/img-11.jpeg";
 
 export interface Project {
   id: string;
@@ -119,5 +121,27 @@ export const projects: Project[] = [
     description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
     coverImage: fluidArt,
     images: [fluidArt9],
+  },
+  {
+    id: "fluid-dynamics",
+    title: "Fluid Dynamics",
+    category: "Fine Art",
+    tags: ["FINE ART", "EXPERIMENTAL"],
+    year: "2022",
+    client: "Art Basel",
+    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
+    coverImage: fluidArt,
+    images: [fluidArt10],
+  },
+  {
+    id: "fluid-dynamics",
+    title: "Fluid Dynamics",
+    category: "Fine Art",
+    tags: ["FINE ART", "EXPERIMENTAL"],
+    year: "2022",
+    client: "Art Basel",
+    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
+    coverImage: fluidArt,
+    images: [fluidArt11]
   },
 ];
