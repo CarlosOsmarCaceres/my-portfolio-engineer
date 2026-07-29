@@ -3,6 +3,8 @@ import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { ChevronDown } from "lucide-react";
+// o si ya tienes otros: import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 
 // Registramos el plugin de ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -154,6 +156,13 @@ const Index = () => {
           <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground drop-shadow-md">
             Carlos Osmar Caceres
           </h1>
+          {/* Scroll Indicator */}
+          <div className="mt-12 md:mt-16 flex flex-col items-center gap-2 text-foreground/60 animate-bounce [animation-duration:3s]">
+            <span className="text-xs font-sans tracking-[0.2em] uppercase">
+              Scroll
+            </span>
+            <ChevronDown size={28} strokeWidth={1.5} />
+          </div>
         </div>
 
         {/* Bio */}
