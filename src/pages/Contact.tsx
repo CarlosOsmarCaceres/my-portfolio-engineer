@@ -10,21 +10,32 @@ const Contact = () => {
           <div className="space-y-12">
             <div>
               <h1 className="text-display mb-6 animate-fade-in-up">
-                Let's work<br />together.
+                Let's work
+                <br />
+                together.
               </h1>
-              <p className="text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <p
+                className="text-xl text-muted-foreground animate-fade-in-up"
+                style={{ animationDelay: "0.1s" }}
+              >
                 Interested in collaborating? Let's talk about your next project.
               </p>
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div
+              className="space-y-6 animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               <a
-                href="mailto:hello@jordanstudio.com"
+                href="mailto:omarcaceres@live.com"
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
-                <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>hello@jordanstudio.com</span>
+                <Mail
+                  size={20}
+                  className="text-muted-foreground group-hover:text-accent transition-colors"
+                />
+                <span>omarcaceres@live.com</span>
               </a>
 
               <a
@@ -33,7 +44,10 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
-                <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                <Instagram
+                  size={20}
+                  className="text-muted-foreground group-hover:text-accent transition-colors"
+                />
                 <span>@jordanstudio</span>
               </a>
 
@@ -44,7 +58,10 @@ const Contact = () => {
             </div>
 
             {/* Location */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <div
+              className="animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
               <p className="text-label mb-2">Based in</p>
               <p className="text-lg">São Paulo, Brazil</p>
             </div>

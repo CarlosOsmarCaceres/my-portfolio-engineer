@@ -1,11 +1,12 @@
-import neonPortrait from "@/assets/neon-portrait.jpg";
-import lightSilhouette from "@/assets/light-silhouette.jpg";
-import tarotCards from "@/assets/tarot-cards.jpg";
-import prismaticPortrait from "@/assets/prismatic-portrait.jpg";
-import digitalWaves from "@/assets/digital-waves.jpg";
-import abstractPaint from "@/assets/abstract-paint.jpg";
-import abstractLayers from "@/assets/abstract-layers.jpg";
-import fluidArt from "@/assets/fluid-art.jpg";
+import neonPortrait from "@/assets/img-01.jpeg";
+import lightSilhouette from "@/assets/img-02.jpeg";
+import tarotCards from "@/assets/img-03.jpeg";
+import prismaticPortrait from "@/assets/img-04.jpeg";
+import digitalWaves from "@/assets/img-05.jpeg";
+import abstractPaint from "@/assets/img-06.jpeg";
+import abstractLayers from "@/assets/img-07.jpeg";
+import fluidArt from "@/assets/img-08.jpeg";
+import fluidArt9 from "@/assets/img-09.jpeg";
 
 export interface Project {
   id: string;
@@ -107,5 +108,16 @@ export const projects: Project[] = [
     description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
     coverImage: fluidArt,
     images: [fluidArt],
+  },
+  {
+    id: "fluid-dynamics",
+    title: "Fluid Dynamics",
+    category: "Fine Art",
+    tags: ["FINE ART", "EXPERIMENTAL"],
+    year: "2022",
+    client: "Art Basel",
+    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
+    coverImage: fluidArt,
+    images: [fluidArt9],
   },
 ];

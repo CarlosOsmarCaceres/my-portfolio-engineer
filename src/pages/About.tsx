@@ -15,7 +15,9 @@ const About = () => {
         <div className="max-w-3xl space-y-12">
           {/* Content */}
           <div>
-            <h1 className="text-display mb-8 animate-fade-in-up">About</h1>
+            <h1 className="text-display mb-8 animate-fade-in-up">
+              Un poco más sobre mí
+            </h1>
 
             <div
               className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground animate-fade-in-up"

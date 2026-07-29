@@ -10,6 +10,7 @@ import Project from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import QaEngineer from "./pages/Qa-Engeneer";
 
 const queryClient = new QueryClient();
 
@@ -22,9 +23,10 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/qa-engineer" element={<QaEngineer />} />
             <Route path="/work" element={<Work />} />
             <Route path="/work/:id" element={<Project />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

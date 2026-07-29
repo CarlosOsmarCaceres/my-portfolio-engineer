@@ -52,10 +52,10 @@ export function Footer({ variant = "default" }: FooterProps) {
               <p className="text-label">Contact</p>
               <div className="text-sm text-foreground space-y-1">
                 <a
-                  href="mailto:hello@jordanstudio.com"
+                  href="mailto:omarcaceres@live.com"
                   className="block hover:text-accent transition-colors"
                 >
-                  hello@jordanstudio.com
+                  omarcaceres@live.com
                 </a>
                 <p>+55 11 9999-9999</p>
               </div>
@@ -79,7 +79,7 @@ export function Footer({ variant = "default" }: FooterProps) {
                 key={i}
                 className="font-display text-6xl md:text-8xl lg:text-[10rem] font-bold text-foreground mx-12"
               >
-                @JORDANSTUDIO
+                QA Engineer -
               </span>
             ))}
           </div>

@@ -2,12 +2,12 @@ import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
 
-const Index = () => {
+const QaEngineer = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Get 8 unique cover images from projects for the grid (4x2)
-  const gridImages = projects.slice(0, 10).map((p) => p.coverImage);
+  const gridImages = projects.slice(0, 20).map((p) => p.coverImage);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
@@ -34,10 +34,10 @@ const Index = () => {
         <div
           className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
           style={{
-            transform: `translate(${-mousePosition.x * 80}px, ${-mousePosition.y * 80}px)`,
+            transform: `translate(${-mousePosition.x * 40}px, ${-mousePosition.y * 40}px)`,
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 p-12 md:p-16 w-full max-w-8xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 p-12 md:p-16 w-full max-w-7xl">
             {gridImages.map((image, index) => (
               <div key={index} className="aspect-[3/4] overflow-hidden">
                 <img
@@ -55,24 +55,26 @@ const Index = () => {
 
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-5xl text-center sm:text-7xl md:text-8xl :text-9xl font-display font-bold tracking-tight text-foreground">
-            Carlos Osmar Caceres
+          <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
+            Carlos OSmar Caceres
           </h1>
         </div>
 
         {/* Bio - Bottom Left */}
-        <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-lg">
-          <h2 className="font-bold">Acerca de mí</h2>
+        <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
+          <h2 className="font-bold">
+            Carlos Osmar Caceres
+          </h2>
           <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
-            Vivo en la ciudad de Buenos Aires, Argentina, y me considero una
-            persona que disfruta de estar siempre en movimiento. Mi gran pasión
-            es el deporte, muy especialmente la práctica de acrobacias, donde
-            encuentro el espacio ideal para entrenar, divertirme y superarme a
-            nivel físico. Por otro lado, tengo un compromiso muy profundo con
-            los animales, ya que soy un firme defensor de sus derechos. Ese amor
-            lo vivo todos los días compartiendo mi rutina junto a mi hermosa
-            familia perruna. Ellos son mi mayor cable a tierra y mi compañía
-            favorita para disfrutar de las cosas simples de la vida.
+            QA Automation Engineer con background como Desarrollador Frontend
+            (React/TypeScript), lo que me permite leer código fuente, entender
+            la arquitectura de los proyectos y colaborar de igual a igual con
+            equipos de desarrollo. Me especializo en automatización E2E con
+            Playwright y Selenium, y estoy en el frente de la nueva disciplina
+            de Agentic QA: uso de agentes de IA (Claude, MCPs, CLI, context
+            engineering) para potenciar estrategias de testing. Combino visión
+            técnica de developer con mentalidad de calidad para encontrar
+            errores críticos antes de que lleguen a producción.
           </p>
         </div>
       </section>
@@ -80,4 +82,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default QaEngineer;
