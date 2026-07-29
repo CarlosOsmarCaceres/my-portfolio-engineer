@@ -52,7 +52,7 @@ export function Header({ revealMode = false }: HeaderProps) {
       }`}
     >
       <div className="container-wide relative">
-        <div className="flex items-center justify-between h-20 md:h-24 bg-background/10 backdrop-blur-sm">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link
             to="/"
