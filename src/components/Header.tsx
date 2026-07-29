@@ -114,7 +114,7 @@ export function Header({ revealMode = false }: HeaderProps) {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 top-20 z-40 animate-fade-in ">
-          <nav className="container-wide py-12 flex flex-col gap-8  bg-b">
+          <nav className="container-wide py-12 flex flex-col gap-8 bg-background/10 backdrop-blur-sm">
             {navItems.map((item, index) => (
               <Link
                 key={item.path}
