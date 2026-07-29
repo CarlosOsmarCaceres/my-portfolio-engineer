@@ -151,7 +151,7 @@ const Index = () => {
           ref={titleRef}
           className="absolute inset-0 flex flex-col items-center justify-center z-10"
         >
-          <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
+          <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground drop-shadow-md">
             Carlos Osmar Caceres
           </h1>
         </div>

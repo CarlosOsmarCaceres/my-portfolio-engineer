@@ -43,84 +43,89 @@ export function Header({ revealMode = false }: HeaderProps) {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  // ... (tus importaciones y lógica de estado quedan exactamente igual)
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all bg-background/10 backdrop-blur-sm duration-500 ${
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : " -translate-y-full pointer-events-none"
-      }`}
-    >
-      <div className="container-wide relative">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="font-display text-lg font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity"
-          >
-            C O C
-          </Link>
+    <>
+      {/* 1. EL HEADER PRINCIPAL */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all bg-background/10 backdrop-blur-sm duration-500 ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : " -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="container-wide relative">
+          <div className="flex items-center justify-between h-20 md:h-24">
+            {/* Logo */}
+            <Link
+              to="/"
+              className="font-display text-lg font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity"
+            >
+              C O C
+            </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-xs font-sans tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
-                  location.pathname === item.path
-                    ? "text-foreground"
-                    : "text-foreground/80 hover:text-foreground"
-                }`}
+            {/* Desktop Navigation - Centered */}
+            <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`text-xs font-sans tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
+                    location.pathname === item.path
+                      ? "text-foreground"
+                      : "text-foreground/80 hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right - Theme Toggle */}
+            <div className="hidden md:flex items-center">
+              <button
+                onClick={toggleTheme}
+                className="p-2 text-foreground/60 hover:text-foreground transition-colors"
+                aria-label="Toggle theme"
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+                {mounted &&
+                  (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
+              </button>
+            </div>
 
-          {/* Right - Theme Toggle */}
-          <div className="hidden md:flex items-center">
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-foreground/60 hover:text-foreground transition-colors"
-              aria-label="Toggle theme"
-            >
-              {mounted &&
-                (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-foreground/60 hover:text-foreground transition-colors"
-              aria-label="Toggle theme"
-            >
-              {mounted &&
-                (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
-            </button>
-            <button
-              className="p-2 -mr-2 text-foreground"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-2">
+              <button
+                onClick={toggleTheme}
+                className="p-2 text-foreground/60 hover:text-foreground transition-colors"
+                aria-label="Toggle theme"
+              >
+                {mounted &&
+                  (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
+              </button>
+              <button
+                className="p-2 -mr-2 text-foreground"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Navigation */}
+      {/* 2. EL MENÚ MÓVIL (Ahora es hermano del header, fuera de él) */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 z-40 animate-fade-in bg-background/10 backdrop-blur-sm ">
-          <nav className="container-wide py-12 flex flex-col gap-8 bg-background/10 backdrop-blur-sm">
+        <div className="md:hidden fixed inset-0 top-20 z-40 animate-fade-in bg-background/10 backdrop-blur-sm">
+          <nav className="container-wide py-12 flex flex-col gap-8 ">
             {navItems.map((item, index) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-4xl font-display text-foreground animate-fade-in-up bg-background/10 backdrop-blur-sm"
+                className="text-4xl font-display text-foreground animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.label}
@@ -129,6 +134,7 @@ export function Header({ revealMode = false }: HeaderProps) {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
+
 }
