@@ -56,7 +56,7 @@ export function Header({ revealMode = false }: HeaderProps) {
         }`}
       >
         <div className="container-wide relative">
-          <div className="flex items-center justify-between h-20 md:h-24">
+          <div className="flex items-center justify-between h-14 md:h-20">
             {/* Logo */}
             <Link
               to="/"
@@ -118,7 +118,7 @@ export function Header({ revealMode = false }: HeaderProps) {
 
       {/* 2. EL MENÚ MÓVIL (Ahora es hermano del header, fuera de él) */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 z-40 animate-fade-in bg-background/10 backdrop-blur-sm">
+        <div className="md:hidden fixed inset-0 top-14 z-40 animate-fade-in bg-background/10 backdrop-blur-sm">
           <nav className="container-wide py-12 flex flex-col gap-8 ">
             {navItems.map((item, index) => (
               <Link
