@@ -29,7 +29,7 @@ const Index = () => {
     const interval = setInterval(() => {
       // 1. Elegimos dos índices aleatorios distintos entre 0 y 9
       const idx1 = Math.floor(Math.random() * 10);
-      let idx2 = Math.floor(Math.random() * 10);
+      let idx2 = Math.floor(Math.random() * 1);
 
       // Nos aseguramos de que no sean el mismo índice
       while (idx2 === idx1) {
@@ -124,7 +124,7 @@ const Index = () => {
             transform: `translate(${-mousePosition.x * 80}px, ${-mousePosition.y * 80}px)`,
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-10 p-12 md:p-16 w-full max-w-8xl">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-10 p-6 md:p-16 w-full max-w-8xl">
             {currentImages.map((image, index) => (
               <div
                 key={index}

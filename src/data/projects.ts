@@ -1,12 +1,12 @@
-import neonPortrait from "@/assets/img-01.jpeg";
-import lightSilhouette from "@/assets/img-02.jpeg";
-import tarotCards from "@/assets/img-03.jpeg";
-import prismaticPortrait from "@/assets/img-04.jpeg";
-import digitalWaves from "@/assets/img-05.jpeg";
-import abstractPaint from "@/assets/img-06.jpeg";
-import abstractLayers from "@/assets/img-07.jpeg";
-import fluidArt from "@/assets/img-08.jpeg";
-import fluidArt9 from "@/assets/img-09.jpeg";
+import fluidArt01 from "@/assets/img-01.jpeg";
+import fluidArt02 from "@/assets/img-02.jpeg";
+import fluidArt03 from "@/assets/img-03.jpeg";
+import fluidArt04 from "@/assets/img-04.jpeg";
+import fluidArt05 from "@/assets/img-05.jpeg";
+import fluidArt06 from "@/assets/img-06.jpeg";
+import fluidArt07 from "@/assets/img-07.jpeg";
+/* import fluidArt08 from "@/assets/img-08.jpeg"; */
+import fluidArt09 from "@/assets/img-09.jpeg";
 import fluidArt10 from "@/assets/img-10.jpeg";
 import fluidArt11 from "@/assets/img-11.jpeg";
 
@@ -31,8 +31,8 @@ export const projects: Project[] = [
     year: "2024",
     client: "Gallery Moderne",
     description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
-    coverImage: neonPortrait,
-    images: [neonPortrait],
+    coverImage: fluidArt01,
+    images: [fluidArt01],
   },
   {
     id: "light-forms",
@@ -42,8 +42,8 @@ export const projects: Project[] = [
     year: "2024",
     client: "Tech Futures Lab",
     description: "Exploring the intersection of human silhouette and abstract light painting. Each piece captures the dynamic tension between body and luminous energy.",
-    coverImage: lightSilhouette,
-    images: [lightSilhouette],
+    coverImage: fluidArt02,
+    images: [fluidArt02],
   },
   {
     id: "mystic-arcana",
@@ -53,8 +53,8 @@ export const projects: Project[] = [
     year: "2024",
     client: "Digital Arts Foundation",
     description: "A delicate study of Art Nouveau tarot imagery, blending traditional illustration with contemporary botanical arrangements and spiritual symbolism.",
-    coverImage: tarotCards,
-    images: [tarotCards],
+    coverImage: fluidArt03,
+    images: [fluidArt03],
   },
   {
     id: "prismatic-dreams",
@@ -64,8 +64,8 @@ export const projects: Project[] = [
     year: "2023",
     client: "Bloom Publishing",
     description: "Ethereal portrait series exploring identity through prismatic light distortion, creating otherworldly compositions that blur the line between reality and dream.",
-    coverImage: prismaticPortrait,
-    images: [prismaticPortrait],
+    coverImage: fluidArt04,
+    images: [fluidArt04],
   },
   {
     id: "digital-currents",
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     year: "2023",
     client: "Neon Collective",
     description: "Immersive digital projections capturing the flow of data and light, where human figures become conduits for streams of vibrant digital energy.",
-    coverImage: digitalWaves,
-    images: [digitalWaves],
+    coverImage: fluidArt05,
+    images: [fluidArt05],
   },
   {
     id: "chromatic-burst",
@@ -86,8 +86,8 @@ export const projects: Project[] = [
     year: "2023",
     client: "Independent",
     description: "Bold abstract expressionism exploring raw emotion through vivid color application and dynamic brushwork on textured canvas surfaces.",
-    coverImage: abstractPaint,
-    images: [abstractPaint],
+    coverImage:   fluidArt06,
+    images: [fluidArt06],
   },
   {
     id: "layered-depths",
@@ -97,8 +97,30 @@ export const projects: Project[] = [
     year: "2022",
     client: "Heritage Museum",
     description: "Complex layered compositions merging digital and traditional techniques, creating depth through overlapping textures and complementary color harmonies.",
-    coverImage: abstractLayers,
-    images: [abstractLayers],
+    coverImage: fluidArt07,
+    images: [fluidArt07],
+  },
+ /*  {
+    id: "fluid-dynamics",
+    title: "Fluid Dynamics",
+    category: "Fine Art",
+    tags: ["FINE ART", "EXPERIMENTAL"],
+    year: "2022",
+    client: "Art Basel",
+    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
+    coverImage: fluidArt08,
+    images: [fluidArt08],
+  }, */
+  {
+    id: "fluid-dynamics",
+    title: "Fluid Dynamics",
+    category: "Fine Art",
+    tags: ["FINE ART", "EXPERIMENTAL"],
+    year: "2022",
+    client: "Art Basel",
+    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
+    coverImage: fluidArt09,
+    images: [fluidArt09],
   },
   {
     id: "fluid-dynamics",
@@ -108,29 +130,7 @@ export const projects: Project[] = [
     year: "2022",
     client: "Art Basel",
     description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
-    coverImage: fluidArt,
-    images: [fluidArt],
-  },
-  {
-    id: "fluid-dynamics",
-    title: "Fluid Dynamics",
-    category: "Fine Art",
-    tags: ["FINE ART", "EXPERIMENTAL"],
-    year: "2022",
-    client: "Art Basel",
-    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
-    coverImage: fluidArt,
-    images: [fluidArt9],
-  },
-  {
-    id: "fluid-dynamics",
-    title: "Fluid Dynamics",
-    category: "Fine Art",
-    tags: ["FINE ART", "EXPERIMENTAL"],
-    year: "2022",
-    client: "Art Basel",
-    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
-    coverImage: fluidArt,
+    coverImage: fluidArt10,
     images: [fluidArt10],
   },
   {
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     year: "2022",
     client: "Art Basel",
     description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
-    coverImage: fluidArt,
+    coverImage: fluidArt11,
     images: [fluidArt11]
   },
 ];
