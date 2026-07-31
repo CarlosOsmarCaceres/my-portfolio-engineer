@@ -165,7 +165,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Bio */}
+        {/* Biography */}
         <div
           ref={bioRef}
           className="absolute bottom-8 md:bottom-12 p-4 mx-4 z-10 lg:w-full lg:p-8 opacity-0 bg-background/10 backdrop-blur-md rounded-3xl border border-foreground/10"
