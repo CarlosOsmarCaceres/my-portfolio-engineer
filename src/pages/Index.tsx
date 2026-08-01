@@ -126,7 +126,7 @@ const Index = () => {
             transform: `translate(${-mousePosition.x * 80}px, ${-mousePosition.y * 80}px)`,
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-10 p-6 md:p-16 w-full max-w-8xl">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 p-6 md:p-16 w-full max-w-8xl">
             {currentImages.map((image, index) => (
               <div
                 key={index}
