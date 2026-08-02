@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Mail, Phone, Instagram } from "lucide-react";
+import { INFO } from "@/data/constants";
 
 const Contact = () => {
   return (
@@ -39,7 +40,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://instagram.com/jordanstudio"
+                href={INFO.ig}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-lg hover-highlight group"
@@ -48,12 +49,12 @@ const Contact = () => {
                   size={20}
                   className="text-muted-foreground group-hover:text-accent transition-colors"
                 />
-                <span>@jordanstudio</span>
+                <span>@omarccaceres</span>
               </a>
 
               <div className="flex items-center gap-4 text-lg text-muted-foreground">
                 <Phone size={20} />
-                <span>+55 11 9999-9999</span>
+                <span>{INFO.phone}</span>
               </div>
             </div>
 
@@ -62,8 +63,8 @@ const Contact = () => {
               className="animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-label mb-2">Based in</p>
-              <p className="text-lg">São Paulo, Brazil</p>
+              <p className="text-label mb-2">Ubicación</p>
+              <p className="text-lg">{INFO.ubicacion}</p>
             </div>
           </div>
 

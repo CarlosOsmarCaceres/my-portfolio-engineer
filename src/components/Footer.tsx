@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { INFO } from "@/data/constants";
 
 interface FooterProps {
   variant?: "default" | "echelon";
@@ -15,10 +16,9 @@ export function Footer({ variant = "default" }: FooterProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {/* Location */}
             <div className="space-y-3">
-              <p className="text-label">Location</p>
+              <p className="text-label">Ubicación</p>
               <div className="text-sm text-foreground space-y-1">
-                <p>São Paulo, SP</p>
-                <p>Brazil</p>
+                <p>{INFO.ubicacion}</p>
               </div>
             </div>
 
@@ -30,7 +30,7 @@ export function Footer({ variant = "default" }: FooterProps) {
                   to="/work"
                   className="block text-foreground hover:text-accent transition-colors"
                 >
-                  Projects
+                  Projectos
                 </Link>
                 <Link
                   to="/about"
@@ -42,7 +42,7 @@ export function Footer({ variant = "default" }: FooterProps) {
                   to="/contact"
                   className="block text-foreground hover:text-accent transition-colors"
                 >
-                  Contact
+                  Contacto
                 </Link>
               </div>
             </div>
@@ -55,9 +55,9 @@ export function Footer({ variant = "default" }: FooterProps) {
                   href="mailto:omarcaceres@live.com"
                   className="block hover:text-accent transition-colors"
                 >
-                  omarcaceres@live.com
+                  {INFO.email}
                 </a>
-                <p>+55 11 9999-9999</p>
+                <p>{INFO.phone}</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export function Footer({ variant = "default" }: FooterProps) {
             <div className="space-y-3">
               <p className="text-label">Legal</p>
               <div className="text-sm text-muted-foreground space-y-1">
-                <p>© {currentYear} All Rights Reserved</p>
+                <p>© {currentYear} Todos los derechos reservados</p>
               </div>
             </div>
           </div>

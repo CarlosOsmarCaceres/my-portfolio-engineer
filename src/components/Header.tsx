@@ -4,7 +4,8 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const navItems = [
-  { label: "About", path: "/about" },
+
+  /* { label: "About", path: "/about" }, */
   { label: "QA Engineer", path: "/qa-engineer" },
   { label: "Projects", path: "/work" },
   { label: "Contact", path: "/contact" },

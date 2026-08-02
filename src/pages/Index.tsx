@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Layout } from "@/components/Layout";
-import { projects } from "@/data/projects";
+import { photo } from "@/data/photo";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { ChevronDown } from "lucide-react";
@@ -20,7 +20,7 @@ const Index = () => {
   const titleRef = useRef<HTMLDivElement>(null);
   const bioRef = useRef<HTMLDivElement>(null);
 
-  const initialImages = projects.slice(0, 10).map((p) => p.coverImage);
+  const initialImages = photo.slice(0, 10).map((p) => p.coverImage);
   const [currentImages, setCurrentImages] = useState(initialImages);
 
   // Guardamos qué índices específicos están haciendo el "fade out"
@@ -170,7 +170,7 @@ const Index = () => {
           ref={bioRef}
           className="absolute bottom-8 md:bottom-12 p-4 mx-4 z-10 lg:w-full lg:p-8 opacity-0 bg-background/10 backdrop-blur-md rounded-3xl border border-foreground/10"
         >
-          <h2 className="font-bold mb-2 text-lg lg:text-3xl">Acerca de mí</h2>
+          <h2 className="font-bold mb-2 text-lg lg:text-3xl">Un poco de mí</h2>
           <p className="text-sm md:text-base w-full max-w-2xl font-sans text-foreground/90 leading-relaxed lg:text-lg">
             {bioText.split("").map((char, index) => (
               <span key={index} className="bio-char opacity-0">

@@ -1,4 +1,4 @@
-import fluidArt01 from "@/assets/img-01.jpeg";
+import fluidArt01 from "@/assets/project_desk_img01.png";
 import fluidArt02 from "@/assets/img-02.jpeg";
 import fluidArt03 from "@/assets/img-03.jpeg";
 import fluidArt04 from "@/assets/img-04.jpeg";
@@ -14,6 +14,7 @@ export interface Project {
   id: string;
   title: string;
   category: string;
+  subcategory?: string;
   tags: string[];
   year: string;
   client: string;
@@ -25,14 +26,15 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "neon-glow",
-    title: "Neon Glow",
+    title: `Institucional Website`,
     category: "Photography",
+    subcategory: "Portrait",
     tags: ["PHOTOGRAPHY", "PORTRAIT"],
     year: "2024",
-    client: "Gallery Moderne",
-    description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
+    client: "Taller de Inversiones SRL",
+    description: "Página de ventas y renovación de membresías enfocada en la conversión de usuarios para servicios de asesoramiento financiero. Diseñada con un enfoque en la claridad de precios y facilidad de pago (Checkouts integrados).",
     coverImage: fluidArt01,
-    images: [fluidArt01],
+    images: [fluidArt02],
   },
   {
     id: "light-forms",
@@ -40,7 +42,7 @@ export const projects: Project[] = [
     category: "Digital Art",
     tags: ["DIGITAL", "EXPERIMENTAL"],
     year: "2024",
-    client: "Tech Futures Lab",
+    client: "Taller de Inversiones SRL",
     description: "Exploring the intersection of human silhouette and abstract light painting. Each piece captures the dynamic tension between body and luminous energy.",
     coverImage: fluidArt02,
     images: [fluidArt02],
