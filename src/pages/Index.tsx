@@ -4,7 +4,7 @@ import { photo } from "@/data/photo";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { ChevronDown } from "lucide-react";
-// o si ya tienes otros: import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
+import ThreeSelectionBox from "@/components/ThreeSelectionBox";
 
 // Registramos el plugin de ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -16,83 +16,102 @@ const bioText =
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  // Refs de todos los elementos a animar
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const bioRef = useRef<HTMLDivElement>(null);
+  const selectionBoxRef = useRef<HTMLDivElement>(null);
 
   const initialImages = photo.slice(0, 10).map((p) => p.coverImage);
   const [currentImages, setCurrentImages] = useState(initialImages);
-
-  // Guardamos qué índices específicos están haciendo el "fade out"
   const [fadingIndices, setFadingIndices] = useState<number[]>([]);
 
   // Efecto para intercambiar 2 imágenes al azar
   useEffect(() => {
     const interval = setInterval(() => {
-      // 1. Elegimos dos índices aleatorios distintos entre 0 y 9
       const idx1 = Math.floor(Math.random() * 10);
-      let idx2 = Math.floor(Math.random() * 1);
+      let idx2 = Math.floor(Math.random() * 10);
 
-      // Nos aseguramos de que no sean el mismo índice
       while (idx2 === idx1) {
         idx2 = Math.floor(Math.random() * 10);
       }
 
-      // 2. Iniciamos el desvanecimiento (fade out) solo en esas dos imágenes
       setFadingIndices([idx1, idx2]);
 
-      // 3. Esperamos a que termine el fade para intercambiarlas
       setTimeout(() => {
         setCurrentImages((prev) => {
           const newImages = [...prev];
-          // Guardamos temporalmente la imagen 1, y cruzamos los datos
           const temp = newImages[idx1];
           newImages[idx1] = newImages[idx2];
           newImages[idx2] = temp;
           return newImages;
         });
-
-        // 4. Limpiamos los índices para que vuelvan a aparecer (fade in)
         setFadingIndices([]);
-      }, 500); // 500ms (lo mismo que dura la transición CSS)
-    }, 3500); // Intercambia imágenes cada 3.5 segundos
+      }, 500);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Efecto de GSAP para el scroll
+  // Efecto de GSAP: Toda la película en una sola escena
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=150%",
+          end: "+=300%", // Se extiende el scroll para acomodar toda la secuencia
           scrub: 1,
           pin: true,
         },
       });
 
+      // 1. El título desaparece y sube
       tl.to(titleRef.current, {
         opacity: 0,
         y: -50,
         duration: 1,
       })
+        // 2. Entra el contenedor de la bio
         .fromTo(
           bioRef.current,
           { opacity: 0, y: 50 },
           { opacity: 1, y: 0, duration: 0.5 },
           "-=0.5",
         )
+        // 3. Entra el texto de la bio letra por letra
         .fromTo(
           ".bio-char",
           { opacity: 0 },
           {
             opacity: 1,
             stagger: 0.02,
-            duration: 0.1,
+            duration: 1.5,
           },
           "-=0.2",
+        )
+        // 4. PAUSA ACTIVA: Agregamos un espacio para que el usuario pueda leer mientras scrollea
+        .to({}, { duration: 0.5 })
+        // 5. La biografía se desvanece y sube un poquito
+        .to(bioRef.current, { opacity: 0, y: -30, duration: 1 })
+        // 6. El cuadro 3D se levanta desde el fondo (usamos autoAlpha para evitar que sea clickeable antes de tiempo)
+        .fromTo(
+          selectionBoxRef.current,
+          {
+            autoAlpha: 0,
+            rotationX: -80, // Acostado hacia atrás
+            z: -800, // Lejos en la perspectiva
+            scale: 0.7,
+          },
+          {
+            autoAlpha: 1,
+            rotationX: 0, // De frente
+            z: 0,
+            scale: 1,
+            duration: 2,
+            ease: "power8.out",
+          },
+          "-=0.5", // Arranca un poquito antes de que termine de desaparecer la bio
         );
     }, containerRef);
 
@@ -101,14 +120,11 @@ const Index = () => {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
-
     const rect = containerRef.current.getBoundingClientRect();
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-
     const x = (e.clientX - rect.left - centerX) / centerX;
     const y = (e.clientY - rect.top - centerY) / centerY;
-
     setMousePosition({ x, y });
   };
 
@@ -117,7 +133,9 @@ const Index = () => {
       <section
         ref={containerRef}
         onMouseMove={handleMouseMove}
+        // Agregamos 'perspective' al contenedor principal para que el 3D funcione en los hijos
         className="relative h-screen overflow-hidden bg-background/10 backdrop-blur-sm"
+        style={{ perspective: "1200px" }}
       >
         {/* Background Grid */}
         <div
@@ -135,7 +153,6 @@ const Index = () => {
                 <img
                   src={image}
                   alt=""
-                  // Evaluamos si ESTE índice en particular está dentro de fadingIndices
                   className={`w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
                     fadingIndices.includes(index) ? "opacity-0" : "opacity-90"
                   }`}
@@ -156,7 +173,6 @@ const Index = () => {
           <h1 className="text-5xl text-center sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground drop-shadow-md">
             Carlos Osmar Caceres
           </h1>
-          {/* Scroll Indicator */}
           <div className="mt-12 md:mt-16 flex flex-col items-center gap-2 text-foreground/60 animate-bounce [animation-duration:3s]">
             <span className="text-xs font-sans tracking-[0.2em] uppercase">
               Scroll
@@ -179,6 +195,8 @@ const Index = () => {
             ))}
           </p>
         </div>
+        {/* 3D Selection Box (moved to component) */}
+        <ThreeSelectionBox ref={selectionBoxRef} />
       </section>
     </Layout>
   );
